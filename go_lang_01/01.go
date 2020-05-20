@@ -10,6 +10,10 @@ func main() {
 	fff := oddNumGenerator()
 	fmt.Print(fff())
 	fmt.Print(fibonachi(5))
+	x := 5
+	y := 2
+	reverseVariables(&x, &y)
+	fmt.Print("\n",x,y)
 
 }
 
@@ -45,6 +49,13 @@ func fibonachi(n int) int {
 	} else {
 		return fibonachi(n-1) + fibonachi(n-2)
 	}
+}
+
+func reverseVariables (x *int, y *int ){
+	z := 0
+	z = *x
+	*x = *y
+	*y = z
 }
 
 
